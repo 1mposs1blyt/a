@@ -70,22 +70,20 @@ async function get_data(query, data_query) {
         all: "SELECT * FROM recipe",
         search: "SELECT * FROM recipe",
         bSearchCheclBx: `${Bsearch}`,//SELECT * FROM recipe WHERE category IN('lunch', 'supper', 'lunch')//`SELECT * FROM recipe WHERE category IN('${data_query.join("', '")}')`
-        index:`SELECT * FROM recipe
+        index: `SELECT * FROM recipe
         FULL OUTER JOIN SeasonTop ON recipe.id=SeasonTop.id
         FULL OUTER JOIN tags
         FULL OUTER JOIN recsteps ON recsteps.id = recipe.id
         `,
-        recipe:`SELECT * FROM recipe WHERE ? LIKE name`,
-        test:`SELECT * FROM recipe JOIN recsteps ON recsteps.id = recipe.id`,
-        test2:`SELECT * FROM recipe 
+        recipe: `SELECT * FROM recipe WHERE ? LIKE id`,
+        test: `SELECT * FROM recipe JOIN recsteps ON recsteps.id = recipe.id`,
+        test2: `SELECT * FROM recipe 
         JOIN recsteps ON recsteps.id = recipe.id ORDER BY id`,
-        topdishes:`SELECT * FROM SeasonTop`,
-        ingridients:`SELECT * FROM ingridients`
+        topdishes: `SELECT * FROM SeasonTop`,
+        ingridients: `SELECT * FROM ingridients`
     }
     let sql = sql_queries[query];
     console.log(sql_queries.bSearchCheclBx);
-    //let sql = "SELECT * FROM users";
-
     let promise = new Promise((resolve, reject) => {
         db.all(sql, data_query, (err, rows) => {
             if (err) {
@@ -100,21 +98,6 @@ async function get_data(query, data_query) {
     db.close();
     return data;
 }
-
-// app.get("/test1",(req, res) => {
-//     res.render(__dirname + '/pages/test.html');
-// })
-// app.post('/test2',(req, res)=>{
-//     let a = req.body
-//     console.log(a)
-//     res.send(req.body)
-// })
-// app.get("/",(req, res) => {
-//     get_data("test2", []).then((resolve) => {
-//         console.log({resolve})
-//         res.render(__dirname + '/pages/index.html', {resolve});
-//     })
-// })
 app.get('/', (req, res) => {
     l = []
     get_data("topdishes", []).then((resolve) => {
@@ -125,8 +108,7 @@ app.get('/', (req, res) => {
         //     // let tags= unparsedtag.split(",")
         // }
         get_data("ingridients", []).then((ingridients) => {
-            // console.log({resolve, ingridients})
-            res.render(__dirname + '/pages/index.html', {resolve, ingridients});
+            res.render(__dirname + '/pages/index.html', { resolve, ingridients });
         })
     })
 });
@@ -139,19 +121,15 @@ app.get('/search', (request, response) => {
         // const data = { resolve };
         for (let i = 0, l = resolve.length; i < l; i++) {
             var obj = resolve[i];
-            // console.log(search, obj.name)
             var similarity = stringSimilarity.compareTwoStrings(String(search == undefined ? "test" : search.toLowerCase()), obj.name.toLowerCase())
             if (similarity >= 0.2) {
-                // console.log(obj.name, 'Сходство(name):', similarity)
                 SearchedList.push(obj)
             }
         }
         for (let i = 0, l = resolve.length; i < l; i++) {
             var obj = resolve[i];
-            // console.log(search, obj.name)
             var similarity = stringSimilarity.compareTwoStrings(String(search == undefined ? "test" : search.toLowerCase()), obj.category.toLowerCase())
             if (similarity >= 0.2) {
-                // console.log(obj.name, 'Сходство(name):', similarity)
                 SearchedList.push(obj)
             }
         }
@@ -175,17 +153,15 @@ app.get('/bettersearch1', (request, res) => {
     let q3 = String(request.query.q3);
     get_data("bSearchCheclBx", [q1, q2, q3]).then((resolve) => {
         res.json(resolve);
-        // res.render(__dirname + '/pages/bsearch.html', resolve);
     })
 })
 
 app.get('/recipe', (req, res) => {
-    let r= req.query.r;
+    let r = req.query.r;
     console.log(r)
+
     get_data("recipe", [r]).then((resolve) => {
-        console.log({resolve})
-        // console.log(resolve[0].name)
-        res.render(__dirname + '/pages/recipe.html', {resolve});
+        res.render(__dirname + '/pages/recipe.html', { resolve });
     })
 })
 // app.get("/index", (request, response) => {
