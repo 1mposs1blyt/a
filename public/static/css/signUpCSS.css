@@ -1,0 +1,104 @@
+main {
+    position: relative;
+    width: 100%;
+    top: -63px;
+    left: 0;
+    z-index: 0;
+}
+
+main div {
+    z-index: 0;
+}
+
+nav  {
+    margin-top: 60px;
+    padding: 0 !important;
+    z-index: 100;
+}
+
+main>.container>.row>div:last-child {
+    background-color: #FEB89A;
+}
+
+.regMenu {
+    font-family: Montserrat;
+    font-size: 24px;
+}
+
+.signUpText {
+    font-size: 48px;
+    margin: 0;
+    margin-top: 100px;
+}
+
+main input {
+    border-radius: 12px;
+    border: #C4C4C4 1px solid;
+    height: 74px;
+    margin: 25px 0 0 0;
+    width: 100%;
+    text-indent: 6.4%;
+}
+
+main form {
+    margin-bottom: 20px;
+}
+
+main button {
+    margin-top: 25px;
+    height: 60px;
+    width: 100%;
+    background-color: #FEB89A; 
+    border-radius: 33px;
+    border: 0 #FEB89A;
+    color: black;
+}
+
+main button:nth-child(3) {
+    margin-top: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #FEB89A;
+    border-radius: 33px;
+}
+
+#sendCodeAgain {
+    margin: 0;
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    color: #979797;
+    text-decoration: underline;
+    position: relative;
+    top: -373px;
+    background-color: white;
+    width: fit-content;
+}
+
+.signUpDecor:last-child {
+    position: relative;
+    font-family: Montserrat;
+    height: auto;
+}
+
+.signUpDecor>div:last-child {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+}
+
+.signUpDecor>div:last-child img {
+    width: 100%;
+}
+
+
+.signUpDecorText {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-60%);
+    text-align: center;
+    width: 50%;
+}

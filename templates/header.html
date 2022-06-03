@@ -1,0 +1,42 @@
+<nav class="container fixed-top navbar navbar-expand-lg navbar-light" style="font-family: 'Bad Script';  text-align: center; background-color: white; z-index: 20;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" style="color: #FFA47C; font-size: 32px;"><img src="/images/Logo.svg" alt="logo"  style="height: 63px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-size: 24px; color: black;">
+                <li class="nav-item headerA">
+                    <a class="nav-link" aria-current="page" href="/"><i style="color: black;">Главная</i></a>
+                </li>
+                <li class="nav-item headerA">
+                    <a class="nav-link" href="/bettersearch"><i style="color: black;">Расширенный поиск</i></a>
+                </li>
+                <li class="nav-item headerA">
+                    <a class="nav-link" href="/"><i style="color: black;">Понравившиеся</i></a>
+                </li>
+            </ul>
+            <form class="d-flex" method="get" action="/search" id="searchForm">
+                <button class="btn"><svg width="45" height="41" viewBox="0 0 45 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="44.1218" y1="39.2917" x2="23.8718" y2="24.6667" stroke="black" stroke-width="3"/>
+                    <circle cx="14.3438" cy="15.2944" r="12.8438" stroke="black" stroke-width="3"/>
+                    </svg>
+                </button>
+            </form>
+            <div id="profile" style="margin-left: 25px; margin-top: 15px; position: relative;">
+                <img src="/images/profileImg.svg" alt="123">
+                <div class="hidden profileMiniMenu">
+                    <img src="/images/profileImg.svg" alt="profileMiniMenuImg">
+                    <button class="btn"  id="signInE">Войти<br>в аккаунт</button>
+                    <a href="/signUp" class="btn" id="signUpE">Зарегистрировать<br>аккаунт</a>
+                </div>
+                <div class="profileMiniMenu d-none">
+                    <img src="/images/profileSetImg.svg" alt="profileMiniMenuImg">
+                    <p style="font-size: 24px;">Евгений Незнайкин</p>
+                    <button id="settings" class="btn">Аллергии отсутствуют</button>
+                    <a href="" class="addRecipe">Добавить рецепт</a>
+                    <a href="" class="signOut">Выйти из аккаунта</a>
+                </div>
+            </div>
+    </div>
+</nav>

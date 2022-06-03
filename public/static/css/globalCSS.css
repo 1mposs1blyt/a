@@ -1,0 +1,399 @@
+@font-face {
+    font-family: "Bad Script";
+    src: url(/fonts/BadScript-Regular.ttf);
+}
+@font-face {
+    font-family: "Inter";
+    src: url(/fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+main {
+    margin-bottom: 115px;
+}
+
+main>div:first-child {
+    margin-top: 99px;
+}
+
+.EZSearchResults p {
+    margin: 0;
+}
+
+form {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.headerA { 
+    margin: 0 21px;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.shown {
+    visibility: visible;
+    opacity: 1;
+}
+
+#logCurrentMenu p {
+    margin: 0;
+}
+
+#logCurrentMenu {
+    padding: 0;
+    background-color: white;
+    z-index: 100;
+    font-family: Inter;
+}
+
+#logCurrentMenu>div {
+    padding: 52px 89px 0 89px;
+    height: 704px;
+    position: relative;
+}
+
+#passwordResetEP {
+    padding: 52px 89px 0 89px;
+    position: relative;
+}
+
+#logCurrentMenu>div>div:nth-last-child(2) {
+    margin-top: 20px;
+}
+
+.logMenusText {
+    font-family: Montserrat;
+    font-size: 48px;
+    text-align: center;
+    line-height: 42px;
+    margin-top: 20px;
+}
+
+.inputNS:last-child {
+    padding-left: 15px;
+}
+
+.inputNS:first-child {
+    padding-right: 15px;
+}
+
+#signUpE img, #signUpP img {
+    margin-top: 29px;
+    width: 366px;
+    height: 402px;
+}
+
+.imgDesc {
+    text-align: right;
+    width: 366px;
+    margin-top: 20px !important;
+}
+
+.topDishTag {
+    background: rgba(254, 184, 154, 0.59);
+    height: 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 10%;
+}
+
+.topDishText {
+    position: relative;
+    margin-top: 5px;
+}
+
+.topDishTags {
+    margin-bottom: 5px;
+}
+
+.topDishGoAway {
+    position: absolute;
+    background-color: #FEB89A;
+    bottom: 0;
+    right: 20px;
+    width: 108.82px;
+    height: 26px;
+    font-size: 14px;
+    line-height: 67%;
+    border-radius: 33px;
+}
+
+.profileMiniMenu  {
+    background-color: white;
+    z-index: 10;
+    padding: 20px 10px;
+    position: absolute;
+    top: 100px;
+    transform: translateX(-50%);
+}
+
+.profileMiniMenu:last-child  {
+    padding: 0 42px;
+    width: fit-content;
+    text-align: center;
+}
+
+.profileMiniMenu:last-child button {
+    width: 193px;
+}
+
+.profileMiniMenu:last-child img {
+    margin-top: 54px;
+}
+
+.profileMiniMenu:last-child p  {
+    margin: 16px 0 0 0;
+}
+
+.profileMiniMenu:last-child a:last-child {
+    margin-bottom: 20px;
+}
+
+#logMenus {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    --bs-gutter-x: 0;
+    width: 100%;
+}
+
+.topDishImgDiv  {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.topDishImgDiv>button {
+    padding: 0;
+    width: 20px;
+}
+
+.topDishImgDiv>button>img {
+    width: 100%;
+}
+
+.topDishImg  {
+    position: relative;
+}
+
+#logCurrentMenu form input {
+    border-radius: 12px;
+    border: #C4C4C4 1px solid;
+    height: 74px;
+    margin: 25px 0 0 0;
+    width: 100%;
+    text-indent: 6.4%;
+}
+
+#logCurrentMenu form input:first-child {
+    margin-top: 45px;
+}
+
+#logCurrentMenu form button:last-child {
+    margin: 40px 0 11px 0;
+    height: 74px;
+    width: 100%;
+    background-color: #FEB89A;
+    border-radius: 33px;
+}
+
+#passwordResetEC>.btn {
+    margin: 40px 0 11px 0;
+    height: 74px;
+    width: 100%;
+    background-color: #FEB89A;
+    border-radius: 33px;
+}
+
+.miniTextGoAway, #signInE .miniTextGoAway:nth-last-child(2) {
+    padding: 1px;
+    margin: 0;
+    line-height: 16px;
+    font-size: 16px;
+    text-decoration: underline;
+    background-color: white;
+    border-radius: 0;
+    width: fit-content;
+    float: right;
+}
+
+#signInE .miniTextGoAway {
+    padding: 1px;
+    margin: 0;
+    line-height: 16px;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 0;
+    text-decoration: none;
+    width: fit-content;
+    float: left;
+}
+
+.extraInfo {
+    margin-top: 106px;
+    line-height: 16px;
+    font-size: 16px;
+}
+
+.extraInfo div {
+    padding: 0;
+}
+
+#passwordResetEP .extraInfo  {
+    margin-top: 30px;
+}
+
+.extraInfo div {
+    display: inline-block;
+    color: #737373;
+}
+
+.extraInfo a:last-child {
+    margin-top: 12px;
+}
+
+.extraInfo a {
+    white-space: nowrap;
+    text-align: end;
+    color: #737373;
+    line-height: 16px;
+}
+
+.sendCodeAgain {
+    position: relative;
+    top: -126px;
+    font-size: 16px;
+    color: #979797;
+    text-decoration: underline;
+    background-color: white;
+    border: 0;
+    line-height: 16px;
+    height: 16px;
+}
+
+.cardText li {
+    list-style-type: none;
+}
+
+#dishCardMenu {
+    background-color: white;
+}
+
+.dishShowRecipe {
+    font-size: 18px;
+    width: fit-content;
+    bottom: -20px;
+}
+
+footer {
+    font-family: Montserrat;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 335px;
+}
+
+.mainFH {
+    font-size: 42px;
+    font-family: Bad Script;
+}
+
+footer textarea {
+    resize: none;
+    width: 120%;
+    border-radius: 10px;
+    border: #F6BAA0 1px solid;
+    height: 95px;
+    margin: 15px 0;
+    text-indent: 2%;
+}
+
+.bugReportAccept {
+    font-family: Montserrat;
+    padding: 8px 40px;
+    font-size: 24px;
+    border-radius: 18px;
+    border: 0;
+    background-color: #FFA47C;
+}
+
+footer li {
+    list-style-type: none;
+    margin: 15px 0;
+}
+
+.Media {
+    text-align: start;
+}
+
+.topDishImgDiv>button {
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 11px;
+    right: 15px;
+}   
+
+.extraInfo select {
+    width: 75%;
+    background-color: white;
+    color: #737373;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    -webkit-appearance: none;
+    position: relative;
+    padding: 5px;
+    padding-right: 20px;
+    float: right;
+    top: 0;
+}
+.extraInfo select option {
+    font-size: 16px;
+    text-align: end;
+}
+
+.extraInfo>div:first-child {
+    position: relative;
+}
+
+.extraInfo>div>img  {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7px;
+}
+
+.signOut {
+    margin-top: 55px;
+    font-size: 18px;
+    display: block;
+}
+
+.addRecipe {
+    margin-top: 45px;
+    color: #FCA079;
+    font-size: 24px;
+    display: block;
+}
+
+#settings {
+    font-size: 18px;
+    margin-top: 25px;
+    display: block;
+}
